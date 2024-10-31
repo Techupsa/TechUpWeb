@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("Backgorund/background1.png") no-repeat center center;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo-techup {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  display: none;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 25px; /* Ensures rounded corners */
+  border: 1px solid #ccc;
+  font-size: 16px;
+  text-align: right;
+  box-shadow: none; /* Optional: Remove shadow for a cleaner look */
+  outline: none; /* Optional: Remove default outline */
+}
+
+.next-button {
+  background: none;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.next-button img {
+  width: 130px;
+}
+
+.logo-dour {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 130px;
+}
+
+/* Basic styles for the text */
+.typing-animation {
+  font-size: 20px;
+  font-family: "Cairo", sans-serif; /* Apply Cairo font */
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  border-left: 4px solid; /* Left border for Arabic typing direction */
+  max-width: 0; /* Start with 0 and grow to full width */
+  animation: typing 3s steps(30) forwards,
+    blink 0.5s step-end infinite alternate;
+  direction: rtl; /* Right-to-left for Arabic */
+  text-align: left; /* Start the typing animation from the right */
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
