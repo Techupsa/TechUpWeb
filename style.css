@@ -91,19 +91,3 @@ input[type="tel"] {
   text-align: left; /* Start the typing animation from the right */
 }
 
-/* Typing effect */
-@keyframes typing {
-  from {
-    max-width: 0;
-  }
-  to {
-    max-width: 100%;
-  }
-}
-
-/* Blinking cursor effect */
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
