@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("Backgorund/background.png") no-repeat center center;
+  background: url("background.png") no-repeat center center;
   background-size: cover;
   font-family: Arial, sans-serif;
 }
