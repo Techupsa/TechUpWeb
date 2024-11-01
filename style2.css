@@ -22,10 +22,14 @@ body {
   font-family: Arial, sans-serif;
 }
 
+h1 {
+  font-family: "Cairo", sans-serif;
+}
+
 .logo-dour {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 0;
   width: 130px;
 }
 
