@@ -34,17 +34,16 @@
           required
         ></textarea>
 
-        <button type="submit">ارسال</button>
+        <!-- Single button that submits the form and then redirects -->
+        <button type="submit" class="next-button"><img src="next.png" alt="Next"/></button>
+
       </form>
-      <a href="page2.html" class="next-button">
-        <img src="buttons/next.png" alt="Next"/>
-      </a>
       <img src="dour.png" alt="Dour Alriyadh Logo" class="logo-dour" />
     </div>
 
     <script>
       document.getElementById('dataForm').addEventListener('submit', function(e) {
-        e.preventDefault();
+        e.preventDefault(); // Prevent the default form submission behavior
 
         const name = document.getElementById('name').value;
         const number = document.getElementById('number').value;
@@ -58,8 +57,8 @@
           },
           body: JSON.stringify({ name, number, interests })
         }).then(response => {
-          alert("Data submitted successfully!");
-          document.getElementById('dataForm').reset();
+          // Upon successful submission, redirect to "page2.html"
+          window.location.href = "page2.html";
         }).catch(error => {
           console.error("Error submitting data:", error);
         });
