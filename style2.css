@@ -1,64 +1,91 @@
+/* Base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to bottom, #6F9CE8, #ffffff , #ffffff, #ffffff, #ffffff, #ffffff);
-    font-family: Arial, sans-serif;
-  }
-  
-  .logo-dour {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 130px;
-  }
-  
-  .logo-techup {
-    width: 70px;
-    margin-bottom: 20px;
-    position: absolute;
-    /* top: 30px;
-    right: 140px; */
-    top: 30px;
-    left: 40px;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #6f9ce8,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff
+  );
+  font-family: Arial, sans-serif;
+}
+
+.logo-dour {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 130px;
+}
+
+.logo-techup {
+  width: 70px;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 30px;
+  left: 20px; /* Adjusted to align better on smaller screens */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; /* Make it take 90% of the screen width */
+  max-width: 400px;
+}
 
 .button {
-    position: fixed; 
-    display: inline-block;
-    bottom: 20px;
-    padding: 10px 20px;
-    background-color: #6F9CE8; 
-    border: 5px solid #999999; 
-    color: white;
-    border: none;
-    border-radius: 20px; 
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none; 
-    right: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 20px;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to make it perfectly centered */
+  padding: 10px 20px;
+  background-color: #6f9ce8;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-  
-.charcter_res{
-    width: 500px;
-    height: auto; /* Maintains aspect ratio */
+
+.charcter_res {
+  width: 80vw; /* 80% of the viewport width */
+  max-width: 600px; /* Maximum width for large screens */
+  min-width: 200px; /* Minimum width for smaller screens */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .logo-dour {
+    width: 100px; /* Resize logo for small screens */
+  }
+
+  .logo-techup {
+    width: 50px; /* Resize logo for small screens */
+  }
+
+  .button {
+    font-size: 14px; /* Smaller font size */
+    padding: 8px 16px; /* Adjust padding */
+    right: 5%; /* Adjust button positioning */
+  }
+
+  .charcter_res {
+    max-width: 200px; /* Smaller image on small screens */
+  }
 }
