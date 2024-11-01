@@ -12,10 +12,8 @@
   <body>
     <div class="container">
       <img src="Techup.png" alt="Tech Up Logo" class="logo-techup" />
-
       <div class="typing-animation">ماودك تعرف مين تشبه من شخصيات تيك آب؟</div>
-
-      <form id="techForm">
+      <form id="dataForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="الاسم" required />
 
@@ -28,7 +26,6 @@
           maxlength="13"
           placeholder="رقم الجوال"
         />
-
         <label for="interests">Interest</label>
         <textarea
           id="interests"
@@ -37,43 +34,36 @@
           required
         ></textarea>
 
-        <button type="button" onclick="submitForm()">ارسال</button>
+        <button type="submit">ارسال</button>
       </form>
-
-      <a href="page2.html" class="next-button"
-        ><img src="next.png" alt="Next"
-      /></a>
-
+      <a href="page2.html" class="next-button">
+        <img src="buttons/next.png" alt="Next"/>
+      </a>
       <img src="dour.png" alt="Dour Alriyadh Logo" class="logo-dour" />
     </div>
+
     <script>
-      async function submitForm() {
-        const form = document.getElementById("techForm");
-        const formData = new FormData(form);
-        const data = {
-          name: formData.get("name"),
-          number: formData.get("number"),
-          interests: formData.get("interests"),
-        };
+      document.getElementById('dataForm').addEventListener('submit', function(e) {
+        e.preventDefault();
 
-        const response = await fetch(
-          "https://script.google.com/macros/s/AKfycbzTesow4aw6YLwwT4W8IqmDYOq3ktDPcXm4tGaaGYVUUv7AJ16KGSGr4vZYSI58EFqg/exec",
-          {
-            // Replace with your Web App URL
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        const name = document.getElementById('name').value;
+        const number = document.getElementById('number').value;
+        const interests = document.getElementById('interests').value;
 
-        if (response.ok) {
-          alert("Form submitted successfully!");
-        } else {
-          alert("Error submitting form.");
-        }
-      }
+        fetch("https://script.google.com/macros/s/AKfycbzM7oUhhCUNfhqtXpHwed2cftQd1J7XnZb62Cczv71pDVvsS8m3AxW_TfPel-C_V-wUhA/exec", {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ name, number, interests })
+        }).then(response => {
+          alert("Data submitted successfully!");
+          document.getElementById('dataForm').reset();
+        }).catch(error => {
+          console.error("Error submitting data:", error);
+        });
+      });
     </script>
   </body>
 </html>
