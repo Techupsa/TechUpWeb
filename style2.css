@@ -6,7 +6,16 @@
 
 body {
   font-family: "Cairo", "Arial", sans-serif;
-  background: url("background.png") no-repeat center center;
+  background: linear-gradient(
+    to bottom,
+    #6f9ce8,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #CBB3F9
+  );
   background-size: cover;
   color: #333;
   direction: rtl;
