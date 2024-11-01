@@ -55,11 +55,19 @@ body {
 
 .photo-grid img {
   width: 100%;
-  max-width: 400px; /* Increase the max width from 300px to 400px */
+  max-width: 400px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth combined transition */
 }
+
+.photo-grid img:hover {
+  transform: scale(1.1) rotate(3deg) translateY(-10px); /* Scale up, rotate slightly, and lift */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+
 
 .button-container {
   display: flex;
