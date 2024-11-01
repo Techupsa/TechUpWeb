@@ -1,14 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Tech Up</title>
-    <link rel="stylesheet" href="style2.css" />
-  </head>
-  <body>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #6F9CE8, #ffffff , #ffffff, #ffffff, #ffffff, #ffffff);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            font-size: 1rem;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+        }
+        h1 {
+            position: fixed; 
+            top: 80px;
+            right: 350px;
+            text-align: center; 
+            color: #333; 
+        }
+        .logo-left, .logo-right {
+            position: absolute;
+            top: 0;
+            width: 100px;
+        }
+        .logo-left {
+            position: fixed; 
+            left: 8px;
+            width: 120px;
+            height: auto;
+
+        }
+        .logo-right {
+            position: fixed; 
+            top: 12px; 
+            right: 20px;
+            width: 80px; 
+            height: auto;
+
+        }
+        
+        .سليمان {
+            position: fixed; 
+            width: 700px;
+            height: auto; 
+            right: 330px;
+            bottom: 70px;
+        }
+        .button {
+            position: fixed; 
+            display: inline-block;
+            bottom: 20px;
+            padding: 10px 20px;
+            background-color: #6F9CE8; 
+            border: 5px solid #999999; 
+            color: white;
+            border: none;
+            border-radius: 20px; 
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none; 
+            right: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
     <div class="container">
-      <img src="Techup.png" alt="Tech Up Logo" class="logo-techup" />
-      <img src="dour.png" alt="Dour Alriyadh Logo" class="logo-dour" />
+        <img src="Techup.png" class="logo-left" alt="شعار Techup">
+        <img src="dour.png" class="logo-right" alt="شعار دور الريادة">
+        <h1> أهلاً أمواج! </h1>
+        <img src="har (1).PNG" class="سليمان">
+        <a href="index.html" class="button">ابدأ من جديد</a> 
     </div>
-  </body>
+    </div>
+</body>
 </html>
