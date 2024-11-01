@@ -55,7 +55,7 @@ h3 {
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Adjust to make it perfectly centered */
   padding: 10px 20px;
-  background-color: #6f9ce8;
+  background-color: #6677e4;
   color: white;
   border-radius: 20px;
   text-align: center;
@@ -64,6 +64,7 @@ h3 {
   cursor: pointer;
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Cairo", "Arial", sans-serif;
 }
 
 .charcter_res {
