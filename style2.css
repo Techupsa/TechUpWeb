@@ -1,4 +1,3 @@
-/* Base styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,26 +9,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    #6f9ce8,
-    #ffffff,
-    #ffffff,
-    #ffffff,
-    #ffffff,
-    #ffffff
-  );
+  background: url("background.png") no-repeat center center;
+  background-size: cover;
   font-family: Arial, sans-serif;
-}
-
-h1 {
-  font-family: "Cairo", sans-serif;
 }
 
 .logo-dour {
   position: absolute;
   top: 20px;
-  right: 0;
+  right: 20px;
   width: 130px;
 }
 
@@ -37,59 +25,34 @@ h1 {
   width: 70px;
   margin-bottom: 20px;
   position: absolute;
+  /* top: 30px;
+  right: 140px; */
   top: 30px;
-  left: 20px; /* Adjusted to align better on smaller screens */
+  left: 40px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%; /* Make it take 90% of the screen width */
+  width: 100%;
   max-width: 400px;
 }
 
-.button {
-  position: fixed;
-  bottom: 20px;
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust to make it perfectly centered */
-  padding: 10px 20px;
-  background-color: #6f9ce8;
-  color: white;
-  border-radius: 20px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
+.next-button {
+  background: none;
+  border: none;
   cursor: pointer;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
-.charcter_res {
-  width: 80vw; /* 80% of the viewport width */
-  max-width: 600px; /* Maximum width for large screens */
-  min-width: 200px; /* Minimum width for smaller screens */
-  height: auto; /* Maintains aspect ratio */
+.next-button img {
+  width: 60px; /* Adjust this size as needed */
+  height: 60px;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
 }
 
-/* Media query for smaller screens */
-@media (max-width: 600px) {
-  .logo-dour {
-    width: 100px; /* Resize logo for small screens */
-  }
-
-  .logo-techup {
-    width: 50px; /* Resize logo for small screens */
-  }
-
-  .button {
-    font-size: 14px; /* Smaller font size */
-    padding: 8px 16px; /* Adjust padding */
-    right: 5%; /* Adjust button positioning */
-  }
-
-  .charcter_res {
-    max-width: 400px; /* Smaller image on small screens */
-  }
+.next-button:hover img {
+  transform: scale(1.2); /* Enlarge the image to 120% on hover */
 }
