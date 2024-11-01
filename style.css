@@ -9,7 +9,16 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("background.png") no-repeat center center;
+  background: linear-gradient(
+    to bottom,
+    #6f9ce8,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #CBB3F9
+  );
   background-size: cover;
   font-family: Arial, sans-serif;
 }
