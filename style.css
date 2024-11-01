@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("background.png") no-repeat center center;
+  background: url("Backgorund/background.png") no-repeat center center;
   background-size: cover;
   font-family: Arial, sans-serif;
 }
@@ -39,7 +39,8 @@ label {
 }
 
 input[type="text"],
-input[type="tel"] {
+input[type="tel"],
+textarea {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
