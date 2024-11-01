@@ -60,7 +60,6 @@ input[type="tel"] {
   min-width: 100px; /* Minimum width to make it larger on smaller screens */
 }
 
-
 .next-button {
   background: none;
   border: none;
@@ -110,8 +109,6 @@ input[type="tel"] {
     border-color: transparent;
   }
 }
-
-
 
 /* Media query for extra small screens */
 @media (max-width: 600px) {
