@@ -6,7 +6,7 @@
 
 body {
   font-family: "Cairo", "Arial", sans-serif;
-  background: url("Backgorund/background.png") no-repeat center center;
+  background: url("background.png") no-repeat center center;
   background-size: cover;
   color: #333;
   direction: rtl;
