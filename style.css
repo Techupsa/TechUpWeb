@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("background.png") no-repeat center center;
+  background: url("Backgorund/background.png") no-repeat center center;
   background-size: cover;
   font-family: Arial, sans-serif;
 }
@@ -51,6 +51,16 @@ input[type="tel"] {
   outline: none; /* Optional: Remove default outline */
 }
 
+.logo-dour {
+  position: absolute;
+  top: 20px;
+  right: 20px; /* Adjusted slightly from right edge for consistent spacing */
+  width: 20vw; /* Adjusted to take up 20% of viewport width */
+  max-width: 130px; /* Maximum width limit */
+  min-width: 100px; /* Minimum width to make it larger on smaller screens */
+}
+
+
 .next-button {
   background: none;
   border: none;
@@ -67,13 +77,6 @@ input[type="tel"] {
 
 .next-button:hover img {
   transform: scale(1.2); /* Enlarge the image to 120% on hover */
-}
-
-.logo-dour {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 130px;
 }
 
 /* Basic styles for the text */
@@ -105,5 +108,15 @@ input[type="tel"] {
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+
+
+/* Media query for extra small screens */
+@media (max-width: 600px) {
+  .logo-dour {
+    width: 100px; /* Set a fixed size for extra small screens */
+    top: 10px; /* Adjust top position for better visibility on small screens */
   }
 }
