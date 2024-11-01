@@ -90,6 +90,6 @@ h3 {
   }
 
   .charcter_res {
-    max-width: 450px; /* Smaller image on small screens */
+    max-width: 500px; /* Smaller image on small screens */
   }
 }
