@@ -6,10 +6,7 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: "Cairo", "Arial", sans-serif;
   background: linear-gradient(
     to bottom,
     #6f9ce8,
@@ -17,13 +14,34 @@ body {
     #ffffff,
     #ffffff,
     #ffffff,
-    #ffffff
+    #ffffff,
+    #cbb3f9
   );
-  font-family: Arial, sans-serif;
+  background-size: cover;
+  color: #333;
+  direction: rtl;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 150px;
 }
 
-h3 {
+.container {
+  padding: 20px;
+  width: 80%;
+  max-width: 900px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3, h4 {
   font-family: "Cairo", sans-serif;
+  color: #333;
 }
 
 .logo-dour {
@@ -38,22 +56,20 @@ h3 {
   margin-bottom: 20px;
   position: absolute;
   top: 30px;
-  left: 20px; /* Adjusted to align better on smaller screens */
+  left: 20px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%; /* Make it take 90% of the screen width */
-  max-width: 400px;
+.charcter_res {
+  width: 80vw;
+  max-width: 450px;
+  min-width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
 .button {
-  position: fixed;
-  bottom: 20px;
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust to make it perfectly centered */
   padding: 10px 20px;
   background-color: #6677e4;
   color: white;
@@ -65,32 +81,50 @@ h3 {
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: "Cairo", "Arial", sans-serif;
+  margin-top: 20px;
 }
 
-.charcter_res {
-  width: 80vw; /* 80% of the viewport width */
-  max-width: 600px; /* Maximum width for large screens */
-  min-width: 200px; /* Minimum width for smaller screens */
-  height: auto; /* Maintains aspect ratio */
+a {
+  color: #6677e4;
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.linktree-icon img {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+  display: inline-block;
+  margin-top: 10px;
+  transition: transform 0.3s;
+}
+
+.linktree-icon img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 /* Media query for smaller screens */
 @media (max-width: 600px) {
   .logo-dour {
-    width: 100px; /* Resize logo for small screens */
+    width: 100px;
   }
 
   .logo-techup {
-    width: 50px; /* Resize logo for small screens */
+    width: 50px;
   }
 
   .button {
-    font-size: 14px; /* Smaller font size */
-    padding: 8px 16px; /* Adjust padding */
-    right: 5%; /* Adjust button positioning */
+    font-size: 14px;
+    padding: 8px 16px;
   }
 
   .charcter_res {
-    max-width: 600px; /* Smaller image on small screens */
+    max-width: 400px;
   }
 }
