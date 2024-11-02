@@ -14,7 +14,7 @@ body {
     #ffffff,
     #ffffff,
     #ffffff,
-    #CBB3F9
+    #cbb3f9
   );
   background-size: cover;
   color: #333;
@@ -67,8 +67,6 @@ body {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
-
-
 .button-container {
   display: flex;
   justify-content: center;
@@ -91,6 +89,11 @@ body {
   text-align: center;
   display: block;
   margin: 20px auto;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.2); /* Enlarge the image to 120% on hover */
 }
 
 .logo-dour {
