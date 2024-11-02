@@ -46,10 +46,9 @@
       // Retrieve the image parameter from the URL and set it as the src for the result image
       const imageName = getParameterByName("image");
       if (imageName) {
-        document.getElementById(
-          "result-image"
-        ).src = `char_results/${imageName}`;
+        document.getElementById("result-image").src = imageName; // No folder prefix
       }
+
     </script>
   </body>
 </html>
