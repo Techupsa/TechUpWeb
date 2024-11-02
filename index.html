@@ -29,7 +29,7 @@
           placeholder="رقم الجوال"
           title="Please enter a number between 9 and 13 digits. Example: 5xxxxxxxxx or 966xxxxxxxxxx"
           inputmode="numeric"
-          pattern="\d*"
+          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
         />
 
         <label for="interests">Interest</label>
