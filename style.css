@@ -120,10 +120,3 @@ textarea {
   }
 }
 
-/* Media query for extra small screens */
-@media (max-width: 600px) {
-  .logo-dour {
-    width: 100px; /* Set a fixed size for extra small screens */
-    top: 10px; /* Adjust top position for better visibility on small screens */
-  }
-}
