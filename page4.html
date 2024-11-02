@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style4.css" />
-    <title>Techup</title>
+    <title>Result</title>
   </head>
   <body>
     <div class="container">
@@ -16,20 +16,40 @@
       <img src="dour.png" alt="Dour Alriyadh Logo" class="logo-dour" />
 
       <h3 id="greeting">أهلًا! لقد قمنا بتحليل شخصيتك ووجدنا ان:</h3>
-      <!-- Placeholder text, will be replaced -->
-      <br>
+      <br />
+      <!-- Placeholder for result image -->
       <img
-        src="Char (1).png"
+        id="result-image"
+        src=""
         alt="character result"
         class="charcter_res"
       />
-      <br>
-      <br>
+      <br /><br />
       <h4>شاركنا النتيجة على مواقع التواصل الاجتماعي</h4>
-      <a href="https://linktr.ee/techup_sa" target="_blank" class="linktree-icon">
+      <a
+        href="https://linktr.ee/techup_sa"
+        target="_blank"
+        class="linktree-icon"
+      >
         <img src="linktree-logo-icon.png" alt="Linktree Icon" />
-      </a>      
+      </a>
       <a href="index.html" class="button">ابدأ من جديد</a>
     </div>
+
+    <script>
+      // Function to get URL parameters
+      function getParameterByName(name) {
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+      }
+
+      // Retrieve the image parameter from the URL and set it as the src for the result image
+      const imageName = getParameterByName("image");
+      if (imageName) {
+        document.getElementById(
+          "result-image"
+        ).src = `char_results/${imageName}`;
+      }
+    </script>
   </body>
 </html>
