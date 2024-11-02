@@ -42,6 +42,8 @@ body {
 h3, h4 {
   font-family: "Cairo", sans-serif;
   color: #333;
+  text-align: center;
+  width: 100%; /* Ensures they span the container width for centering */
 }
 
 .logo-dour {
