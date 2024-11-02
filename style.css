@@ -1,3 +1,4 @@
+/* Base styles */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
 }
 
 body {
+  font-family: "Cairo", "Arial", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,10 +19,9 @@ body {
     #ffffff,
     #ffffff,
     #ffffff,
-    #CBB3F9
+    #cbb3f9
   );
   background-size: cover;
-  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -64,10 +65,8 @@ textarea {
 .logo-dour {
   position: absolute;
   top: 20px;
-  right: 20px; /* Adjusted slightly from right edge for consistent spacing */
-  width: 20vw; /* Adjusted to take up 20% of viewport width */
-  max-width: 130px; /* Maximum width limit */
-  min-width: 100px; /* Minimum width to make it larger on smaller screens */
+  right: 0;
+  width: 130px;
 }
 
 .next-button {
@@ -119,4 +118,3 @@ textarea {
     border-color: transparent;
   }
 }
-
