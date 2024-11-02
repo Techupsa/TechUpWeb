@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>الأسئلة</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="style3.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
@@ -15,23 +15,47 @@
       <img src="Techup.png" alt="Tech Up Logo" class="logo-techup" />
       <img src="dour.png" alt="Dour Alriyadh Logo" class="logo-dour" />
 
-      <form action="page4.html">
+      <form id="quiz-form">
         <div class="question-card">
           <h3>
             1: أي من العبارات التالية يصف أهم مبادئك إذا كنت بصدد عمل المشروع
             جديد؟
           </h3>
           <label
-            ><input type="radio" name="q1" required /> حماية خصوصية وأمان الأخرين</label
+            ><input
+              type="radio"
+              name="q1"
+              required
+              data-category="cyber_security"
+            />
+            حماية خصوصية وأمان الأخرين</label
           >
-          <label><input type="radio" name="q1" required /> جعل الحياة اأسهل</label>
           <label
-            ><input type="radio" name="q1" required /> تطوير أنظمة قوية تعمل
-            بسلاسة</label
+            ><input
+              type="radio"
+              name="q1"
+              required
+              data-category="artificial_intelligence"
+            />
+            جعل الحياة أسهل</label
           >
           <label
-            ><input type="radio" name="q1" required /> تقديم تجارب ممتعة وغامرة تحاكي
-            الواقع</label
+            ><input
+              type="radio"
+              name="q1"
+              required
+              data-category="computer_engineering"
+            />
+            تطوير أنظمة قوية تعمل بسلاسة</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="q1"
+              required
+              data-category="virtual_reality"
+            />
+            تقديم تجارب ممتعة وغامرة تحاكي الواقع</label
           >
         </div>
 
@@ -41,101 +65,278 @@
             بها؟
           </h3>
           <label
-            ><input type="radio" name="q2" required /> التفكير في توظيف الثورة واستخدام
-            الذكاء الإصطناعي لتقديم ميزة ذكية</label
+            ><input
+              type="radio"
+              name="q2"
+              required
+              data-category="artificial_intelligence"
+            />
+            التفكير في توظيف الثورة واستخدام الذكاء الإصطناعي لتقديم ميزة
+            ذكية</label
           >
           <label
-            ><input type="radio" name="q2" required /> جمع وتحليل بيانات العملاء لفهم
-            احتياجاتهم</label
+            ><input
+              type="radio"
+              name="q2"
+              required
+              data-category="data_analysis"
+            />
+            جمع وتحليل بيانات العملاء لفهم احتياجاتهم</label
           >
           <label
-            ><input type="radio" name="q2" required /> تطوير برنامج أو تطبيق يسهل إدارة
-            المشروع</label
+            ><input
+              type="radio"
+              name="q2"
+              required
+              data-category="software_engineering"
+            />
+            تطوير برنامج أو تطبيق يسهل إدارة المشروع</label
           >
           <label
-            ><input type="radio" name="q2" required /> الاهتمام بالعميل والتفكير بكيفية
-            توفير تجربة تفاعلية للعملاء باستخدام تقنيات مبتكرة</label
+            ><input
+              type="radio"
+              name="q2"
+              required
+              data-category="virtual_reality"
+            />
+            الاهتمام بالعميل والتفكير بكيفية توفير تجربة تفاعلية للعملاء
+            باستخدام تقنيات مبتكرة</label
           >
         </div>
 
         <div class="question-card">
           <h3>3: ما الذي تستمتع بقضاء وقت فراغك به؟</h3>
-          <label><input type="radio" name="q3" required /> حل الألغاز</label>
           <label
-            ><input type="radio" name="q3" required /> تفكيك الأشياء لمعرفة كيفية
-            عملها</label
+            ><input
+              type="radio"
+              name="q3"
+              required
+              data-category="cyber_security"
+            />
+            حل الألغاز</label
           >
           <label
-            ><input type="radio" name="q3" required /> ابتكار أفكار أو تصميم مشاريع
-            جديدة</label
+            ><input
+              type="radio"
+              name="q3"
+              required
+              data-category="computer_engineering"
+            />
+            تفكيك الأشياء لمعرفة كيفية عملها</label
           >
           <label
-            ><input type="radio" name="q3" required /> مشاهدة أفلام أو ألعاب تعتمد على
-            الخيال</label
+            ><input
+              type="radio"
+              name="q3"
+              required
+              data-category="software_engineering"
+            />
+            ابتكار أفكار أو تصميم مشاريع جديدة</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="q3"
+              required
+              data-category="virtual_reality"
+            />
+            مشاهدة أفلام أو ألعاب تعتمد على الخيال</label
           >
         </div>
 
         <div class="question-card">
           <h3>4: إذا أردت تعلم مهارة جديدة، فما هو المجال الذي ستختاره؟</h3>
           <label
-            ><input type="radio" name="q4" required /> أساليب حماية المعلومات والوقاية من
-            المخاطر</label
+            ><input
+              type="radio"
+              name="q4"
+              required
+              data-category="cyber_security"
+            />
+            أساليب حماية المعلومات والوقاية من المخاطر</label
           >
           <label
-            ><input type="radio" name="q4" required /> تعلم أدوات التحليل واستنتاج
-            المعلومات من البيانات</label
+            ><input
+              type="radio"
+              name="q4"
+              required
+              data-category="data_analysis"
+            />
+            تعلم أدوات التحليل واستنتاج المعلومات من البيانات</label
           >
           <label
-            ><input type="radio" name="q4" required /> تعلم كيفية عمل الأجهزة وبناء أنظمة
-            تقنية</label
+            ><input
+              type="radio"
+              name="q4"
+              required
+              data-category="computer_engineering"
+            />
+            تعلم كيفية عمل الأجهزة وبناء أنظمة تقنية</label
           >
           <label
-            ><input type="radio" name="q4" required /> تعلم مهارات التفكير المختلفة
-            لإيجاد حلول مبتكرة</label
+            ><input
+              type="radio"
+              name="q4"
+              required
+              data-category="software_engineering"
+            />
+            تعلم مهارات التفكير المختلفة لإيجاد حلول مبتكرة</label
           >
         </div>
 
         <div class="question-card">
           <h3>5: ما هو العنصر الأهم بالنسبة لك في أي بيئة عمل؟</h3>
           <label
-            ><input type="radio" name="q5" required /> الابتكار والتجديد المستمر</label
+            ><input
+              type="radio"
+              name="q5"
+              required
+              data-category="artificial_intelligence"
+            />
+            الابتكار والتجديد المستمر</label
           >
           <label
-            ><input type="radio" name="q5" required /> الوضوح وتوفر معلومات تساعد في
-            اتخاذ القرارات</label
+            ><input
+              type="radio"
+              name="q5"
+              required
+              data-category="data_analysis"
+            />
+            الوضوح وتوفر معلومات تساعد في اتخاذ القرارات</label
           >
           <label
-            ><input type="radio" name="q5" required /> الاستقرار والكفاءة العالية</label
+            ><input
+              type="radio"
+              name="q5"
+              required
+              data-category="computer_engineering"
+            />
+            الاستقرار والكفاءة العالية</label
           >
           <label
-            ><input type="radio" name="q5" required /> الإبداع وتقديم تجارب جديدة</label
+            ><input
+              type="radio"
+              name="q5"
+              required
+              data-category="virtual_reality"
+            />
+            الإبداع وتقديم تجارب جديدة</label
           >
         </div>
 
         <div class="question-card">
           <h3>6: إذا كنت تواجه مشكلة، ما هو الأسلوب الذي تميل إليه في حلها؟</h3>
           <label
-            ><input type="radio" name="q6" required /> البحث عن حلول تقليدية وآمنة لتجنب
-            المخاطر</label
+            ><input
+              type="radio"
+              name="q6"
+              required
+              data-category="cyber_security"
+            />
+            البحث عن حلول تقليدية وآمنة لتجنب المخاطر</label
           >
           <label
-            ><input type="radio" name="q6" required /> التفكير في حل يعتمد على الذكاء أو
-            الابتكار</label
+            ><input
+              type="radio"
+              name="q6"
+              required
+              data-category="artificial_intelligence"
+            />
+            التفكير في حل يعتمد على الذكاء أو الابتكار</label
           >
           <label
-            ><input type="radio" name="q6" required /> جمع جميع المعلومات المتاحة لتحديد
-            السبب الأساسي للمشكلة</label
+            ><input
+              type="radio"
+              name="q6"
+              required
+              data-category="data_analysis"
+            />
+            جمع جميع المعلومات المتاحة لتحديد السبب الأساسي للمشكلة</label
           >
           <label
-            ><input type="radio" name="q6" required /> ابتكار طريقة جديدة أو تجربة حل غير
-            تقليدي</label
+            ><input
+              type="radio"
+              name="q6"
+              required
+              data-category="software_engineering"
+            />
+            ابتكار طريقة جديدة أو تجربة حل غير تقليدي</label
           >
         </div>
 
         <div class="button-container">
-          <button type="submit" class="submit-btn">إرسال</button>
+          <button type="button" class="submit-btn" onclick="calculateResult()">
+            إرسال
+          </button>
         </div>
       </form>
+
+      <div id="result" class="result-container" style="display: none">
+        <h3>Result:</h3>
+        <img
+          id="result-image"
+          src=""
+          alt="Result Character"
+          style="display: none"
+        />
+      </div>
+      <script>
+        function calculateResult() {
+          // Check if all questions are answered
+          const questions = document.querySelectorAll('.question-card');
+          for (let i = 0; i < questions.length; i++) {
+            const answered = questions[i].querySelector('input[type="radio"]:checked');
+            if (!answered) {
+              alert("Please answer all questions before submitting.");
+              return; // Stop execution if a question is not answered
+            }
+          }
+      
+          // Proceed with result calculation if all questions are answered
+          const categories = {
+            cyber_security: 0,
+            artificial_intelligence: 0,
+            computer_engineering: 0,
+            virtual_reality: 0,
+            data_analysis: 0,
+            software_engineering: 0,
+          };
+      
+          // Image paths for each category
+          const categoryImages = {
+            cyber_security: "Cyber_s_char.png",
+            artificial_intelligence: "AI_char.png",
+            computer_engineering: "Computer_eng_char.png",
+            virtual_reality: "VR_char.png",
+            data_analysis: "Data_ana_char.png",
+            software_engineering: "Software_eng_char.png",
+          };
+      
+          // Get all selected radio inputs
+          const selectedAnswers = document.querySelectorAll('input[type="radio"]:checked');
+      
+          // Count selections based on category
+          selectedAnswers.forEach((answer) => {
+            const category = answer.getAttribute("data-category");
+            categories[category]++;
+          });
+      
+          // Find the category with the highest count
+          let maxCategory = "";
+          let maxCount = 0;
+          for (const category in categories) {
+            if (categories[category] > maxCount) {
+              maxCount = categories[category];
+              maxCategory = category;
+            }
+          }
+      
+          // Redirect to page4.html with the result image path as a URL parameter
+          const resultImage = categoryImages[maxCategory];
+          window.location.href = `page4.html?image=${encodeURIComponent(resultImage)}`;
+        }
+      </script>
+      
     </div>
   </body>
 </html>
