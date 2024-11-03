@@ -29,8 +29,13 @@
           placeholder="رقم الجوال"
           title="Please enter a number between 9 and 13 digits. Example: 5xxxxxxxxx or 966xxxxxxxxxx"
           inputmode="numeric"
-          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+          oninput="
+            this.value = this.value.replace(/[^0-9]/g, '');
+            document.getElementById('error-message').style.display = this.value.length < 9 ? 'inline' : 'none';
+          "
         />
+        <span id="error-message" style="color: red; display: none;">Please enter a valid number between 9 and 13 digits.</span>
+
 
         <label for="interests">Interest</label>
         <textarea
