@@ -57,6 +57,12 @@
           const number = document.getElementById("number").value;
           const interests = document.getElementById("interests").value;
 
+          // Check if the phone number has at least 9 digits
+          if (number.length < 9) {
+            alert("Phone number must be at least 9 digits.");
+            return; // Stop the function if the validation fails
+          }
+
           fetch(
             "https://script.google.com/macros/s/AKfycbyK_J0toHtyCREUg-eQRBfHoSUSr7Nu8LPgd1LPnjlakIUkKyv0L3NlNGdgVJPBdAGA/exec",
             {
