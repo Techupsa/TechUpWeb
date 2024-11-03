@@ -48,39 +48,34 @@
     </div>
 
     <script>
-      document.getElementById("dataForm").addEventListener("submit", function (e) {
-        const number = document.getElementById("number").value;
+      document
+        .getElementById("dataForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent the default form submission behavior
 
-        // Check if the number has at least 9 digits
-        if (number.length < 9) {
-          e.preventDefault(); // Prevent form submission if less than 9 digits
-          alert("Please enter a valid number with at least 9 digits.");
-          return; // Stop further execution if the condition is met
-        }
+          const name = document.getElementById("name").value;
+          const number = document.getElementById("number").value;
+          const interests = document.getElementById("interests").value;
 
-        // Proceed with form submission to Google Sheets if valid
-        const name = document.getElementById("name").value;
-        const interests = document.getElementById("interests").value;
-
-        fetch(
-          "https://script.google.com/macros/s/AKfycbyK_J0toHtyCREUg-eQRBfHoSUSr7Nu8LPgd1LPnjlakIUkKyv0L3NlNGdgVJPBdAGA/exec",
-          {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ name, number, interests }),
-          }
-        )
-          .then((response) => {
-            // Upon successful submission, redirect to "page2.html"
-            window.location.href = "page2.html";
-          })
-          .catch((error) => {
-            console.error("Error submitting data:", error);
-          });
-      });
+          fetch(
+            "https://script.google.com/macros/s/AKfycbyK_J0toHtyCREUg-eQRBfHoSUSr7Nu8LPgd1LPnjlakIUkKyv0L3NlNGdgVJPBdAGA/exec",
+            {
+              method: "POST",
+              mode: "no-cors",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ name, number, interests }),
+            }
+          )
+            .then((response) => {
+              // Upon successful submission, redirect to "page2.html"
+              window.location.href = "page2.html";
+            })
+            .catch((error) => {
+              console.error("Error submitting data:", error);
+            });
+        });
     </script>
   </body>
 </html>
