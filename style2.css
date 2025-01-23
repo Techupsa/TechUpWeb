@@ -107,6 +107,7 @@ body {
   width: 70px;
   margin-bottom: 20px;
   position: absolute;
-  top: 30px;
-  left: 20px;
+  top: 30px; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
