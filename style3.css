@@ -102,6 +102,7 @@ input[type="radio"] {
   width: 70px;
   margin-bottom: 20px;
   position: absolute;
-  top: 30px;
-  left: 20px; /* Adjusted to align better on smaller screens */
+  top: 30px; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
